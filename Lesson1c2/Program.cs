@@ -9,7 +9,18 @@ namespace Lesson1c2  // Виктор Маликов
             
             Number();
 
+            
+            int k = 10;
+            Console.WriteLine($"вывод последовательности  {k} чисел фибоначи");
+            for (int i = 0; i <= k; i++)
+            {
+                Console.WriteLine(Fibonachi3(i));
+            }
+            Console.WriteLine("вывод последовательности  {k} чисел фибоначи");
+            Fibonachi(k);
         }
+
+        //  Задание №2 сложность функции = O(N^3)
 
         static bool Number()
         {
@@ -36,6 +47,29 @@ namespace Lesson1c2  // Виктор Маликов
             }
             Console.WriteLine($"число: {number} не простое");
             return false;
+        }
+
+        static int Fibonachi3(int n) // рекурсия
+        {
+           
+            if (n == 0 || n == 1) return n;
+
+            return Fibonachi3(n - 1) + Fibonachi3(n - 2);
+
+        }
+
+        static int Fibonachi(int n, int p1 = 0, int p2 = 1) //без рекурсии
+        {
+            if (n <= 1) return p1;
+            int p;
+            for (int j = 2; j <= n; j++)
+            {
+                p = p1;
+                p1 = p2;
+                p2 += p;
+                Console.WriteLine(p2);
+            }
+            return p2;
         }
     } 
 }
