@@ -6,6 +6,7 @@ namespace Lesson1c2  // Виктор Маликов
     {
         static void Main(string[] args)
         {
+
         } 
 
     }
