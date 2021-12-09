@@ -16,7 +16,7 @@ namespace Lesson1c2  // Виктор Маликов
             {
                 Console.WriteLine(Fibonachi3(i));
             }
-            Console.WriteLine("вывод последовательности  {k} чисел фибоначи");
+            Console.WriteLine($"вывод последовательности  {k} чисел фибоначи") ;
             Fibonachi(k);
         }
 
@@ -67,7 +67,7 @@ namespace Lesson1c2  // Виктор Маликов
                 p = p1;
                 p1 = p2;
                 p2 += p;
-                Console.WriteLine(p2);
+                Console.WriteLine(p1);
             }
             return p2;
         }
