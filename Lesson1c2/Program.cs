@@ -7,14 +7,15 @@ namespace Lesson1c2  // Виктор Маликов
         static void Main(string[] args)
         {
             
-            Number(int.Parse(Console.ReadLine()));
-           // int n = int.Parse(Console.ReadLine());
+            Number();
 
         }
 
-        static bool Number(int number)
+        static bool Number()
         {
+            
             Console.WriteLine("для проверки простлое ли число введите его: ");
+            int number = int.Parse(Console.ReadLine());
             int d = 0;
             if (number % 2 == 0)
             {
