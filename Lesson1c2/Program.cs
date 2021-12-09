@@ -6,19 +6,35 @@ namespace Lesson1c2  // Виктор Маликов
     {
         static void Main(string[] args)
         {
-            int n = Console.ReadLine();
-            Console.WriteLine($"Output: {Reverse(n)}");
+            
+            Number(int.Parse(Console.ReadLine()));
+           // int n = int.Parse(Console.ReadLine());
+
         }
-        public static long Reverse(long n)
-        //В данном случае ввод — это просто аргумент функции. Просто входной параметр.
+
+        static bool Number(int number)
         {
-            long newN = 0;
-            while (n > 0)
+            Console.WriteLine("для проверки простлое ли число введите его: ");
+            int d = 0;
+            if (number % 2 == 0)
             {
-                newN = newN * 10 + n % 10;
-                n /= 10;
+                Console.WriteLine($"число: {number} не простое");
+                return false;
             }
-            return newN;
+            for (int i = 2; i < number; i++)
+            {
+                if (number % i == 0)
+                {
+                    d++;
+                }
+            }
+            if (d == 0)
+            {
+                Console.WriteLine($"число: {number} простое");
+                return true;
+            }
+            Console.WriteLine($"число: {number} не простое");
+            return false;
         }
     } 
 }
