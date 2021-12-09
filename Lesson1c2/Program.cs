@@ -62,12 +62,12 @@ namespace Lesson1c2  // Виктор Маликов
         {
             if (n <= 1) return p1;
             int p;
-            for (int j = 2; j <= n; j++)
+            for (int j = 0; j <= n; j++)
             {
                 p = p1;
                 p1 = p2;
                 p2 += p;
-                Console.WriteLine(p1);
+                Console.WriteLine(p);
             }
             return p2;
         }
