@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lesson1c2  // Виктор Маликов
+namespace Lesson1c2  // Виктор Маликов DZ№2
 {
     internal class Program
     {
@@ -9,7 +9,6 @@ namespace Lesson1c2  // Виктор Маликов
             
             Number();
 
-            
             int k = 10;
             Console.WriteLine($"вывод последовательности  {k} чисел фибоначи");
             for (int i = 0; i <= k; i++)
