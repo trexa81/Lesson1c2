@@ -1,31 +1,51 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Lesson1c2  // Виктор Маликов DZ№2
 {
     internal class Program
     {
+        static List<ILesson2> _lessons = new List<ILesson2>()
+        {
+            new LessonStub (),
+            new Lesson1PrimeNumbers(),
+            new FibonachiNumbers(),
+            new FibonachiNumbersRecursion()
+        };
         static void Main(string[] args)
         {
-            
-            Number();
-
-            int k = 10;
-            Console.WriteLine($"вывод последовательности  {k} чисел фибоначи");
-            for (int i = 0; i <= k; i++)
+            Console.WriteLine("для запуска задания введите его код.");
+            Console.WriteLine("Список заданий:");
+            foreach (ILesson2 lesson in _lessons)
             {
-                Console.WriteLine(Fibonachi3(i));
+                Console.WriteLine($"Код:{lesson.Name} ({lesson.Description})");
+
             }
-            Console.WriteLine($"вывод последовательности  {k} чисел фибоначи") ;
-            Fibonachi(k);
+            /*********************************************/
+
+            //Console.WriteLine("для проверки простлое ли число введите его: ");
+            //int n1 = int.Parse(Console.ReadLine());
+            //Number(n1);
+            // /*********************************************/
+            
+
+            //int k = 10;
+            //for (int i = 0; i <= k; i++)
+            //{
+            //    Console.WriteLine(Fibonachi3(i));
+            //}
+            //Console.WriteLine($"вывод последовательности  {k} чисел фибоначи");
+            //Fibonachi(k);
+            Console.WriteLine("*********************************");
         }
 
         //  Задание №2 сложность функции = O(N^3)
+        /*****************************************************/
 
-        static bool Number()
+        static bool Number(int number)
         {
             
-            Console.WriteLine("для проверки простлое ли число введите его: ");
-            int number = int.Parse(Console.ReadLine());
+           
             int d = 0;
             if (number % 2 == 0)
             {
@@ -47,15 +67,16 @@ namespace Lesson1c2  // Виктор Маликов DZ№2
             Console.WriteLine($"число: {number} не простое");
             return false;
         }
+        /*****************************************************/
 
         static int Fibonachi3(int n) // рекурсия
         {
-           
-            if (n == 0 || n == 1) return n;
 
+            if (n == 0 || n == 1) return n;
             return Fibonachi3(n - 1) + Fibonachi3(n - 2);
 
         }
+        /*****************************************************/
 
         static int Fibonachi(int n, int p1 = 0, int p2 = 1) //без рекурсии
         {
