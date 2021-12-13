@@ -55,15 +55,8 @@ namespace Lesson1c2
             throw new NotImplementedException(); //заглушка
         }
 
-        public void RemoveNode(Node node)
-        {
-            if (node.NextNode == null)
-                return;
+        public void RemoveNode(Node node) => throw new NotImplementedException(); //заглушка
 
-            var nextItem = node.NextNode.NextNode;
-            node.NextNode = nextItem;
-
-        }
 
         public void PrintList()
         {
