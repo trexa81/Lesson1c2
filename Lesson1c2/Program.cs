@@ -14,6 +14,7 @@ namespace Lesson1c2  // Виктор Маликов DZ№2
         };
         static void Main(string[] args)
         {
+
             Console.WriteLine("для запуска задания введите его код.");
             Console.WriteLine("Список заданий:");
             foreach (ILesson2 lesson in _lessons)

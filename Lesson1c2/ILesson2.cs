@@ -25,5 +25,6 @@ namespace Lesson1c2 //список
         /// Вывод тестовых данных.
         /// </summary>
         void Demo ();
+
     }
 }

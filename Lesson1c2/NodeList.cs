@@ -8,6 +8,7 @@ namespace Lesson1c2
 {
     internal class NodeList : ILinkedList
     {
+
         private Node head;
         private Node tail;
 
