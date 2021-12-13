@@ -10,7 +10,7 @@ namespace Lesson1c2
     {
         public string Name => "list";
 
-        public string Description => "2 Двусвязный список";
+        public string Description => "2.0 Двусвязный список";
 
         public void Demo()
         {

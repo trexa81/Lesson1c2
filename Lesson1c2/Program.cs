@@ -10,8 +10,9 @@ namespace Lesson1c2  // Виктор Маликов DZ№2
             new LessonStub (),
             new Lesson1PrimeNumbers(),
             new FibonachiNumbers(),
-            new FibonachiNumbersRecursion()
-            //new DoublyLinkedList()
+            new FibonachiNumbersRecursion(),
+            new DoublyLinkedList()
+
         };
 
         static void Main(string[] args)
