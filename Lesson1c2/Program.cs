@@ -11,7 +11,7 @@ namespace Lesson1c2  // Виктор Маликов DZ№2
             new Lesson1PrimeNumbers(),
             new FibonachiNumbers(),
             new FibonachiNumbersRecursion()
-            new DoublyLinkedList()
+            //new DoublyLinkedList()
         };
 
         static void Main(string[] args)
