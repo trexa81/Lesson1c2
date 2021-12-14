@@ -1,75 +1,53 @@
-﻿using System;
+﻿using NPOI.SS.Formula.Functions;
+using System;
+using System.Collections.Generic;
 
-namespace Lesson1c2  // Виктор Маликов
+namespace Lesson1c2  // Виктор Маликов DZ№2
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static List<ILesson2> _lessons = new List<ILesson2>()
         {
-            
-            Number();
+            new LessonStub (),
+            new Lesson1PrimeNumbers(),
+            new FibonachiNumbers(),
+            new FibonachiNumbersRecursion(),
+            new DoublyLinkedList()
 
-            
-            int k = 10;
-            Console.WriteLine($"вывод последовательности  {k} чисел фибоначи");
-            for (int i = 0; i <= k; i++)
+        };
+
+        static void Main()
+        {
+            Console.WriteLine("Список заданий:");
+            foreach (ILesson2 lesson in _lessons)
             {
-                Console.WriteLine(Fibonachi3(i));
+                Console.WriteLine($"Код:{lesson.Name} ({lesson.Description})");
             }
-            Console.WriteLine($"вывод последовательности  {k} чисел фибоначи") ;
-            Fibonachi(k);
+            Console.WriteLine("длязавершения задания введите: end");
+            Console.Write("для запуска задания введите его код: ");
+            while (true)
+            {
+                string userInput = Console.ReadLine();
+                if (userInput != "end")
+                {
+                    List<T>(userInput);
+                }
+                break;
+            }
+            Console.WriteLine("*********************************");
         }
 
-        //  Задание №2 сложность функции = O(N^3)
-
-        static bool Number()
+        private static void List<T>(string userInput)
         {
-            
-            Console.WriteLine("для проверки простлое ли число введите его: ");
-            int number = int.Parse(Console.ReadLine());
-            int d = 0;
-            if (number % 2 == 0)
+            Console.Clear();
+            foreach (ILesson2 myLesson in _lessons)
             {
-                Console.WriteLine($"число: {number} не простое");
-                return false;
-            }
-            for (int i = 2; i < number; i++)
-            {
-                if (number % i == 0)
+                if (myLesson.Name == userInput)
                 {
-                    d++;
+                    myLesson.Demo();
                 }
             }
-            if (d == 0)
-            {
-                Console.WriteLine($"число: {number} простое");
-                return true;
-            }
-            Console.WriteLine($"число: {number} не простое");
-            return false;
-        }
-
-        static int Fibonachi3(int n) // рекурсия
-        {
-           
-            if (n == 0 || n == 1) return n;
-
-            return Fibonachi3(n - 1) + Fibonachi3(n - 2);
-
-        }
-
-        static int Fibonachi(int n, int p1 = 0, int p2 = 1) //без рекурсии
-        {
-            if (n <= 1) return p1;
-            int p;
-            for (int j = 0; j <= n; j++)
-            {
-                p = p1;
-                p1 = p2;
-                p2 += p;
-                Console.WriteLine(p);
-            }
-            return p2;
+            Main();
         }
     } 
 }
