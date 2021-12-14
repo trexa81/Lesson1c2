@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Lesson1c2  // Виктор Маликов DZ№2
+namespace Lesson1c2  // Виктор Маликов DZ№3
 {
     internal class Program
     {
@@ -13,7 +13,6 @@ namespace Lesson1c2  // Виктор Маликов DZ№2
             new FibonachiNumbers(),
             new FibonachiNumbersRecursion(),
             new DoublyLinkedList()
-
         };
 
         static void Main()
