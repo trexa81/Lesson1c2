@@ -9,6 +9,7 @@ namespace Lesson1c2  // Виктор Маликов DZ№3.1
         private static List<ILesson2> _lessons = new List<ILesson2>()
         {
             new LessonStub (),
+            new LessonTEST(),
             new Lesson1PrimeNumbers(),
             new FibonachiNumbers(),
             new FibonachiNumbersRecursion(),
