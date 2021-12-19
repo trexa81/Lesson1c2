@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 
-namespace Lesson1c2  // Виктор Маликов DZ№3
+namespace Lesson1c2  // Виктор Маликов DZ№3.1
 {
     internal class Program
     {
         private static List<ILesson2> _lessons = new List<ILesson2>()
         {
             new LessonStub (),
+            new LessonTEST(),
             new Lesson1PrimeNumbers(),
             new FibonachiNumbers(),
             new FibonachiNumbersRecursion(),
@@ -36,6 +37,11 @@ namespace Lesson1c2  // Виктор Маликов DZ№3
             Console.WriteLine("*********************************");
         }
 
+        /// <summary>
+        /// выбор задания из списка
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="userInput"></param>
         private static void List<T>(string userInput)
         {
             Console.Clear();
